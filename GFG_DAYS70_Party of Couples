@@ -1,0 +1,16 @@
+static int findSingle(int n, int arr[]){
+        // code here
+        return Arrays.stream(arr).boxed().reduce((num1, num2)-> num1^num2).get();
+    }
+//
+class Solution{
+    static int findSingle(int n, int arr[]){
+        // code here
+        int ans = 0;
+        for(int i = 0;i<n;i++) {
+           ans = ans ^ arr[i]; 
+        }
+        return ans;
+    }
+}
+
